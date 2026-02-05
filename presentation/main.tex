@@ -64,7 +64,19 @@
 \begin{frame}{Extension 1: Double DQN}
 \end{frame}
 
-\begin{frame}{Extension 2: Multi-step Learning}    
+\begin{frame}{Extension 2: Multi-step Learning}
+    \begin{center}
+        \textit{Idea: } Instead of using only the immediate reward, we use the reward of the next n steps.
+    \end{center}
+    \vspace{3mm}
+    \begin{itemize}
+        \item Instead of using the standard TD target:
+        $$ R_{t+1} + \gamma \max_{a'} Q_\theta(s_{t+1}, a') $$
+        \item We use the n-step return:
+        $$ R_t^{(n)} + \gamma^{(n)} \max_{a'} Q_\theta(s_{t+n}, a') $$
+        \item Where:
+        $$ R_t^{(n)} = \sum_{k=0}^{n-1} \gamma^k R_{t+k+1} = R_{t+1} + \gamma R_{t+2} + ... + \gamma^{n-1} R_{t+n} $$
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Extension 3: Dueling DQN}
