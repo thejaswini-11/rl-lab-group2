@@ -1,6 +1,6 @@
 # Exploring DQN Extensions on MinAtari-Breakout
 
-This project implements and compares DQN extemsions to understand their individual and combined effects on learning performance:
+This project implements and compares DQN extensions to understand their individual and combined effects on learning performance:
 
 - **Vanilla DQN** - Baseline implementation
 - **Double DQN** - Reduces overestimation bias by decoupling action selection from evaluation
